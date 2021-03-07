@@ -23,7 +23,7 @@ const config = {
   },
 
   setEnv() {
-    this.isProd = process.argv.includes('--prod');
+    this.isProd = process.argv.includes('--production');
     this.isDev = !this.isProd;
   },
 };
