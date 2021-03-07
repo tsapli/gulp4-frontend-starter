@@ -2,6 +2,30 @@
   "name": "gulp4-frontend-starter",
   "version": "1.0.0",
   "description": "gulp4 frontend starter",
+  "scripts": {
+    "dev": "gulp watching",
+    "build:dev": "gulp build",
+    "build:prod": "gulp build --prod"
+  },
+  "lint-staged": {
+    "*.js": "eslint"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "author": "tsapli",
-  "license": "WTFPL"
+  "license": "WTFPL",
+  "devDependencies": {
+    "@babel/core": "^7.13.8",
+    "@babel/eslint-parser": "^7.13.8",
+    "@babel/preset-env": "^7.13.9",
+    "@babel/register": "^7.13.8",
+    "eslint": "^7.21.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "gulp": "^4.0.2",
+    "husky": "^5.1.3"
+  }
 }
