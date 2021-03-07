@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "gulp4 frontend starter",
   "scripts": {
+    "prepare": "husky install",
     "dev": "gulp watching",
     "build:dev": "gulp build",
     "build:prod": "gulp build --prod"
