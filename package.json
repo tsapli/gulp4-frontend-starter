@@ -8,14 +8,6 @@
     "build:dev": "gulp build",
     "build:prod": "gulp build --prod"
   },
-  "lint-staged": {
-    "*.js": "eslint"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "author": "tsapli",
   "license": "WTFPL",
   "devDependencies": {
