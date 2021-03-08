@@ -1,4 +1,4 @@
 {
-  "*.js": "eslint"
+  "*.js": "eslint",
   "*.pug": "pug-lint"
 }
