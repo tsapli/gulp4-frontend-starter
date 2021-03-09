@@ -1,4 +1,7 @@
 import 'focus-visible';
-import hello from './components/hello';
+import lazyImages from './modules/lazyImages';
+import documentReady from './helpers/documentReady';
 
-hello();
+documentReady(() => {
+  lazyImages();
+});
