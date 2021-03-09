@@ -17,7 +17,7 @@ const server = (cb) => {
         },
       },
     ],
-    open: false,
+    open: true,
     notify: false,
   });
   cb();

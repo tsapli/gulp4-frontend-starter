@@ -13,8 +13,6 @@ const production = !!argv.production;
 webpackConfig.mode = production ? 'production' : 'development';
 webpackConfig.devtool = production ? false : 'source-map';
 
-// console.log(webpackConfig.mode);
-
 export const scriptsBuild = () => (
   src(`${config.src.js}/main.js`)
     .pipe(plumber())
