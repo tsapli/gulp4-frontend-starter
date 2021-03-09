@@ -18,9 +18,9 @@ const faviconsBuild = () => (
         coast: false,
       },
     }))
-    .pipe(dest(config.dest.favicons))
+    .pipe(dest(`${config.dest.images}/favicons`))
     .pipe(debug({
-      title: 'FAVICON files',
+      title: 'FAVICONS files:',
     }))
 );
 export default faviconsBuild;

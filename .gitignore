@@ -15,7 +15,6 @@ node_modules
 .idea
 ex_files
 Thumbs.db
-.husky
 
 .yarn/*
 !.yarn/cache

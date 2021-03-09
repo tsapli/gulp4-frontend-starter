@@ -23,7 +23,7 @@ export const stylesBuild = () => (
     .pipe(gulpif(config.isDev, sourcemaps.write()))
     .pipe(dest(config.dest.css))
     .pipe(debug({
-      title: 'SCSS files',
+      title: 'SCSS files:',
     }))
     .pipe(browserSync.stream())
 );

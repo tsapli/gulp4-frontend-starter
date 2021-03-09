@@ -9,12 +9,12 @@ export default function fontsBuild() {
     .pipe(ttf2woff())
     .pipe(dest(config.dest.fonts))
     .pipe(debug({
-      title: 'TTF2WOFF files',
+      title: 'TTF2WOFF files:',
     }));
   return src(`${config.src.fonts}/*.ttf`)
     .pipe(ttf2woff2())
     .pipe(dest(config.dest.fonts))
     .pipe(debug({
-      title: 'TTF2WOFF2 files',
+      title: 'TTF2WOFF2 files:',
     }));
 }

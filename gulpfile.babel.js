@@ -5,6 +5,8 @@ import config from './gulp/config';
 import { pugBuild, pugWatch } from './gulp/tasks/pug';
 import { scriptsBuild, scriptsWatch } from './gulp/tasks/scripts';
 import { stylesBuild, stylesWatch } from './gulp/tasks/styles';
+import { imagesBuild, imagesWatch } from './gulp/tasks/images';
+import { spritesBuild, spritesWatch } from './gulp/tasks/sprites';
 import faviconsBuild from './gulp/tasks/favicons';
 import fontsBuild from './gulp/tasks/fonts';
 
@@ -16,6 +18,8 @@ export const build = series(
     pugBuild,
     scriptsBuild,
     stylesBuild,
+    imagesBuild,
+    spritesBuild,
     fontsBuild,
     faviconsBuild,
   ),
@@ -28,5 +32,7 @@ export const watching = series(
     pugWatch,
     scriptsWatch,
     stylesWatch,
+    imagesWatch,
+    spritesWatch,
   ),
 );

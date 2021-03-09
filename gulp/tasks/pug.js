@@ -32,7 +32,7 @@ export const pugBuild = () => (
     .pipe(pug({ pretty: config.isDev }))
     .pipe(dest(config.dest.html))
     .pipe(debug({
-      title: 'PUG files',
+      title: 'PUG files:',
     }))
     .pipe(browserSync.stream())
 );

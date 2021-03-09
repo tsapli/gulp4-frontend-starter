@@ -22,7 +22,7 @@ export const scriptsBuild = () => (
     .pipe(gulpif(config.isProd, rename({ suffix: '.min' })))
     .pipe(dest(config.dest.js))
     .pipe(debug({
-      title: 'JS files',
+      title: 'JS files:',
     }))
     .pipe(browserSync.stream())
 );
