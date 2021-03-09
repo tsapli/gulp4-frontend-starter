@@ -4,6 +4,7 @@ import server from './gulp/tasks/server';
 import config from './gulp/config';
 import { pugBuild, pugWatch } from './gulp/tasks/pug';
 import { scriptsBuild, scriptsWatch } from './gulp/tasks/scripts';
+import { stylesBuild, stylesWatch } from './gulp/tasks/styles';
 import faviconsBuild from './gulp/tasks/favicons';
 import fontsBuild from './gulp/tasks/fonts';
 
@@ -14,6 +15,7 @@ export const build = series(
   parallel(
     pugBuild,
     scriptsBuild,
+    stylesBuild,
     fontsBuild,
     faviconsBuild,
   ),
@@ -25,5 +27,6 @@ export const watching = series(
   parallel(
     pugWatch,
     scriptsWatch,
+    stylesWatch,
   ),
 );
