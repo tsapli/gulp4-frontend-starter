@@ -60,7 +60,7 @@ const spriteMulti = () => (
     .pipe(dest(config.dest.images))
 );
 
-export const spritesBuild = () => parallel(spriteMono, spriteMulti);
+export const spritesBuild = parallel(spriteMono, spriteMulti);
 
 export const spritesWatch = () => {
   watch(`${config.src.iconsMono}/**/*.svg`, spriteMono);

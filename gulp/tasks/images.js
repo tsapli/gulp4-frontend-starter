@@ -25,6 +25,7 @@ const copyImages = () => (
     .pipe(debug({
       title: 'IMAGES files:',
     }))
+    .pipe(browserSync.stream())
 );
 
 const converImagesToWebp = () => (
@@ -41,6 +42,6 @@ const converImagesToWebp = () => (
     .pipe(browserSync.stream())
 );
 
-export const imagesBuild = () => series(copyImages, converImagesToWebp);
+export const imagesBuild = series(copyImages, converImagesToWebp);
 
 export const imagesWatch = () => watch(`${config.src.images}/**/*`, imagesBuild);
