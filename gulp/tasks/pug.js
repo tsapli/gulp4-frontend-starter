@@ -5,6 +5,7 @@ import browserSync from 'browser-sync';
 import plumber from 'gulp-plumber';
 import { setup as emittySetup } from '@zoxon/emitty';
 import debug from 'gulp-debug';
+import pugIncludeGlob from 'pug-include-glob';
 import config from '../config';
 
 const emittyPug = emittySetup(config.src.pug, 'pug', {
@@ -29,7 +30,10 @@ export const pugBuild = () => (
         ),
       ),
     )
-    .pipe(pug({ pretty: config.isDev }))
+    .pipe(pug({
+      pretty: config.isDev,
+      plugins: [pugIncludeGlob()],
+    }))
     .pipe(dest(config.dest.html))
     .pipe(debug({
       title: 'PUG files:',
